@@ -236,6 +236,27 @@ const projectData = {
             "Full-featured Admin analytics panel displaying order histories and revenues.",
             "Advanced search indexing with sorting and price filtering."
         ]
+    },
+    safeguard: {
+        title: "SAFEGUARD",
+        subtitle: "Women's Safety Application",
+        tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Twilio SMS API", "Geolocation API"],
+        description: "SAFEGUARD is a full-stack emergency response system designed to help users trigger alerts and coordinate swift safety dispatch. It features automated alerts containing live locations and voice recording logging.",
+        techStack: [
+            "React.js, HTML5 & CSS3: Built a responsive, touch-friendly user experience for instant emergency use.",
+            "Node.js & Express.js: Developed a lightweight, robust REST API backend for alert logic and database routing.",
+            "MongoDB: Securely stores user profiles, emergency contacts list, event logs, and message histories.",
+            "Twilio SMS API: Automatically formats and dispatches alert messages with live locations to emergency contacts.",
+            "Geolocation API: Retrieves real-time GPS coordinates of the user immediately upon emergency activation.",
+            "Client-Server REST APIs: Secure communication using REST APIs and JSON payload formatting."
+        ],
+        features: [
+            "One-Click SOS triggers: Instantly launches the emergency response workflow.",
+            "Live GPS Location Sharing: Automatically attaches real-time coordinates to emergency texts.",
+            "Automated Audio Recording: Records background audio evidence immediately on activation.",
+            "Real-time Notification Alerts: Provides visual confirmation messages and live tracking updates.",
+            "Scalable full-stack design utilizing MongoDB and third-party communications APIs."
+        ]
     }
 };
 
