@@ -37,7 +37,6 @@
             </a>
             <nav class="nav-links">
                 <a href="#hero" class="nav-link active">Home</a>
-                <a href="#terminal-section" class="nav-link">Terminal</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -62,7 +61,6 @@
     <div class="mobile-drawer">
         <nav class="mobile-nav-links">
             <a href="#hero" class="mobile-link">Home</a>
-            <a href="#terminal-section" class="mobile-link">Terminal</a>
             <a href="#about" class="mobile-link">About</a>
             <a href="#skills" class="mobile-link">Skills</a>
             <a href="#experience" class="mobile-link">Experience</a>
@@ -92,10 +90,7 @@
                         Hi, I'm <strong>Varshitha G.A</strong>. I specialize in building robust Django REST backends, dynamic React frontends, and integrating AI workflows.
                     </p>
                     <div class="hero-ctas animate-reveal">
-                        <a href="#terminal-section" class="btn btn-primary">
-                            <i class="fa-solid fa-terminal"></i> Try Developer Shell
-                        </a>
-                        <a href="varshithaga3.pdf" download class="btn btn-secondary">
+                        <a href="varshithaga3.pdf" download class="btn btn-primary">
                             <i class="fa-solid fa-file-arrow-down"></i> Download Resume
                         </a>
                         <a href="#projects" class="btn btn-secondary">
@@ -127,53 +122,7 @@
             </div>
         </section>
 
-        <!-- Terminal Section -->
-        <section id="terminal-section" class="terminal-section section-padding scroll-reveal">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Interactive Workspace</span>
-                    <h2 class="section-title">Developer <span class="gradient-text">Shell</span></h2>
-                    <p class="section-subtitle">Interact with my professional background, skills, and projects through this simulated shell terminal.</p>
-                </div>
-                
-                <div class="terminal-wrapper">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <span class="term-btn btn-close"></span>
-                            <span class="term-btn btn-minimize"></span>
-                            <span class="term-btn btn-maximize"></span>
-                        </div>
-                        <div class="terminal-title"><i class="fa-solid fa-terminal"></i> guest@varshitha.dev:~</div>
-                        <div class="terminal-status"><span class="status-indicator"></span> Online</div>
-                    </div>
-                    
-                    <div class="terminal-body" id="terminalBody">
-                        <div class="terminal-line system-msg">
-                            ========================================================================
-                            Welcome to Varshitha G.A's Dev Shell v1.0.0
-                            Type <span class="term-highlight">'help'</span> for a list of active commands.
-                            Click on any preset command below to auto-execute.
-                            ========================================================================
-                        </div>
-                        <div class="terminal-output" id="terminalOutput"></div>
-                        <div class="terminal-input-line">
-                            <span class="terminal-prompt">guest@varshitha.dev:~$</span>
-                            <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false" placeholder="Type command...">
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-shortcuts">
-                        <span class="shortcut-label">Presets:</span>
-                        <button class="terminal-btn" data-cmd="about">about</button>
-                        <button class="terminal-btn" data-cmd="skills">skills</button>
-                        <button class="terminal-btn" data-cmd="projects">projects</button>
-                        <button class="terminal-btn" data-cmd="experience">experience</button>
-                        <button class="terminal-btn" data-cmd="resume">resume</button>
-                        <button class="terminal-btn" data-cmd="clear">clear</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- About & Education Section -->
         <section id="about" class="about-section section-padding scroll-reveal">

@@ -1,6 +1,6 @@
 # Interactive Developer Portfolio
 
-A premium, interactive developer portfolio featuring a simulated developer shell terminal, dynamic particles background, responsive design, and abstract tech stack visualizations.
+A premium developer portfolio featuring a dynamic particles background, responsive design, abstract tech stack visualizations, and downloadable resume.
 
 ## 🚀 How to Run the Program
 
@@ -33,15 +33,15 @@ Using a development server ensures smooth loading of local assets, fonts, and pa
 ---
 
 ## 🛠️ Features
-- **Interactive Developer Shell**: A simulated browser-based CLI terminal supporting commands like `help`, `about`, `skills`, `experience`, `projects`, `education`, `contact`, `linkedin`, `github`, and `resume` with tab presets.
 - **Custom Particles Background**: Multi-colored reactive canvas lines connecting nodes dynamically using cursor distance algorithms.
 - **Project Detail Modals**: High-fidelity detail views injected dynamically based on project choice filters.
 - **Premium Glassmorphic Design**: Curated CSS variables with rich dark modes, smooth gradients, and micro-interactions.
+- **Direct Resume Download**: Readily accessible resume links integrated in the header, hero section, mobile drawer, and about page.
 
 ---
 
 ## 📂 Project Structure
 - [index.html](file:///d:/varshithaga100/Portfolio/index.html) - Structural semantic HTML5 layout.
 - [style.css](file:///d:/varshithaga100/Portfolio/style.css) - Core styling, custom scrollbars, animations, and typography variables.
-- [script.js](file:///d:/varshithaga100/Portfolio/script.js) - Particles canvas simulation, terminal engine, project filter, and drawer logic.
+- [script.js](file:///d:/varshithaga100/Portfolio/script.js) - Particles canvas simulation, project filter, and drawer logic.
 - [varshithaga3.pdf](file:///d:/varshithaga100/Portfolio/varshithaga3.pdf) - Professional CV/Resume download source.
