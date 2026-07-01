@@ -142,6 +142,7 @@ Available commands:
   <span class="term-highlight">contact</span>     - All contact links and info
   <span class="term-highlight">linkedin</span>    - View my LinkedIn profile
   <span class="term-highlight">github</span>      - View my GitHub repository
+  <span class="term-highlight">resume</span>      - Open/Download my resume PDF
   <span class="term-highlight">clear</span>       - Clear terminal outputs
   <span class="term-highlight">help</span>        - Display list of commands
 `,
@@ -202,17 +203,21 @@ Type <span class="term-highlight">'projects'</span> or click cards in the "Proje
 <span class="term-res-title">Get in Touch</span>
   * <span class="term-highlight">Email:</span> <a class="term-res-link" href="mailto:varshithaga2003@gmail.com">varshithaga2003@gmail.com</a>
   * <span class="term-highlight">Phone:</span> +91-8088785958
-  * <span class="term-highlight">LinkedIn:</span> <a class="term-res-link" href="https://linkedin.com" target="_blank">linkedin.com/in/varshitha-ga</a>
+  * <span class="term-highlight">LinkedIn:</span> <a class="term-res-link" href="https://www.linkedin.com/in/varshitha-ga-272154366/" target="_blank">linkedin.com/in/varshitha-ga-272154366</a>
   * <span class="term-highlight">GitHub:</span> <a class="term-res-link" href="https://github.com/varshithaga" target="_blank">github.com/varshithaga</a>
   * <span class="term-highlight">Location:</span> Bengaluru, Karnataka, India
 `,
     linkedin: () => {
-        window.open('https://linkedin.com', '_blank');
+        window.open('https://www.linkedin.com/in/varshitha-ga-272154366/', '_blank');
         return `Opening LinkedIn profile...`;
     },
     github: () => {
         window.open('https://github.com/varshithaga', '_blank');
         return `Opening GitHub profile...`;
+    },
+    resume: () => {
+        window.open('varshithaga3.pdf', '_blank');
+        return `Opening resume PDF in a new tab...`;
     }
 };
 
