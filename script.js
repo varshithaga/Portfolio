@@ -203,7 +203,7 @@ Type <span class="term-highlight">'projects'</span> or click cards in the "Proje
   * <span class="term-highlight">Email:</span> <a class="term-res-link" href="mailto:varshithaga2003@gmail.com">varshithaga2003@gmail.com</a>
   * <span class="term-highlight">Phone:</span> +91-8088785958
   * <span class="term-highlight">LinkedIn:</span> <a class="term-res-link" href="https://linkedin.com" target="_blank">linkedin.com/in/varshitha-ga</a>
-  * <span class="term-highlight">GitHub:</span> <a class="term-res-link" href="https://github.com" target="_blank">github.com/varshithaga100</a>
+  * <span class="term-highlight">GitHub:</span> <a class="term-res-link" href="https://github.com/varshithaga" target="_blank">github.com/varshithaga</a>
   * <span class="term-highlight">Location:</span> Bengaluru, Karnataka, India
 `,
     linkedin: () => {
@@ -211,7 +211,7 @@ Type <span class="term-highlight">'projects'</span> or click cards in the "Proje
         return `Opening LinkedIn profile...`;
     },
     github: () => {
-        window.open('https://github.com', '_blank');
+        window.open('https://github.com/varshithaga', '_blank');
         return `Opening GitHub profile...`;
     }
 };
@@ -555,48 +555,4 @@ mobileLinks.forEach(link => {
 });
 
 
-/* ==========================================================================
-   Contact Form Validation & Submission Mock
-   ========================================================================== */
-const contactForm = document.getElementById('contactForm');
-const formFeedback = document.getElementById('formFeedback');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('.btn-submit');
-    const origHTML = submitBtn.innerHTML;
-    
-    // Set spinner loading state
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Sending Message...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>`;
-    
-    const name = document.getElementById('formName').value;
-    const email = document.getElementById('formEmail').value;
-    const message = document.getElementById('formMessage').value;
-    
-    // Simulate API delay
-    setTimeout(() => {
-        if (name && email && message) {
-            formFeedback.textContent = "Thank you, your message has been sent successfully! I will reach out shortly.";
-            formFeedback.className = "form-feedback success";
-            formFeedback.classList.remove('hidden');
-            
-            // Clear form
-            contactForm.reset();
-        } else {
-            formFeedback.textContent = "Error sending message. Please fill out all fields.";
-            formFeedback.className = "form-feedback error";
-            formFeedback.classList.remove('hidden');
-        }
-        
-        // Reset submit button
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = origHTML;
-        
-        // Hide feedback after 5 seconds
-        setTimeout(() => {
-            formFeedback.classList.add('hidden');
-        }, 5000);
-    }, 1500);
-});
