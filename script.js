@@ -52,7 +52,7 @@ class Particle {
             let dx = this.x - mouse.x;
             let dy = this.y - mouse.y;
             let distance = Math.sqrt(dx * dx + dy * dy);
-            
+
             if (distance < mouse.radius) {
                 let force = (mouse.radius - distance) / mouse.radius;
                 let angle = Math.atan2(dy, dx);
@@ -107,7 +107,7 @@ function connectParticles() {
 // Animation loop
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     particles.forEach(particle => {
         particle.update();
         particle.draw();
@@ -133,9 +133,9 @@ filterButtons.forEach(button => {
         // Update active class
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        
+
         const filterValue = button.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             const categories = card.getAttribute('data-category').split(' ');
             if (filterValue === 'all' || categories.includes(filterValue)) {
@@ -217,6 +217,25 @@ const projectData = {
             "Flexible pricing and subscription payments integration.",
             "Interactive nutrition tracker graphs and metrics logging."
         ]
+    },
+    shopflux: {
+        title: "SHOPFLUX",
+        subtitle: "High-Performance B2C E-Commerce Platform",
+        tags: ["React.js", "Django REST", "Firebase Auth", "PostgreSQL", "Redux Toolkit"],
+        description: "SHOPFLUX is a premium, robust E-Commerce web application engineered for smooth online retail operations. It implements scalable APIs for product catalogs, cart logic, orders and reviews",
+        techStack: [
+            "React.js & Redux Toolkit: Provides dynamic client-side rendering with global state management.",
+            "Django REST Framework (DRF): Secure, transactional backend APIs powered by Python.",
+            "Firebase Authentication: Social logins, OTP verification, and multi-factor security.",
+            "PostgreSQL: Relational database with optimized index structures for products and categories.",
+        ],
+        features: [
+            "Secure user signup and authentication using Firebase.",
+            "Dynamic shopping cart and persistent checkout pipelines.",
+            "Real-time inventory levels tracking and stock update webhooks.",
+            "Full-featured Admin analytics panel displaying order histories and revenues.",
+            "Advanced search indexing with sorting and price filtering."
+        ]
     }
 };
 
@@ -230,7 +249,7 @@ projectCards.forEach(card => {
     card.addEventListener('click', () => {
         const projectId = card.getAttribute('data-project-id');
         const data = projectData[projectId];
-        
+
         if (data) {
             renderModal(data);
             projectModal.classList.add('active');
@@ -253,7 +272,7 @@ function renderModal(data) {
     const tagsHTML = data.tags.map(tag => `<span class="project-tag-pill">${tag}</span>`).join('');
     const techHTML = data.techStack.map(tech => `<li><i class="fa-solid fa-circle-check"></i> <span>${tech}</span></li>`).join('');
     const featuresHTML = data.features.map(feat => `<li><i class="fa-solid fa-check"></i> <span>${feat}</span></li>`).join('');
-    
+
     modalContent.innerHTML = `
         <div class="modal-header-section">
             <div class="modal-tag-row">${tagsHTML}</div>
@@ -295,21 +314,21 @@ const navLinks = document.querySelectorAll('.nav-link');
 // Scroll handler
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
-    
+
     // Toggle header opacity
     if (scrollPos > 50) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
-    
+
     // Toggle Scroll-to-Top visibility
     if (scrollPos > 300) {
         scrollToTopBtn.classList.add('visible');
     } else {
         scrollToTopBtn.classList.remove('visible');
     }
-    
+
     // Active navigation links update on scroll
     updateActiveNavLink(scrollPos);
 });
@@ -343,12 +362,12 @@ revealElements.forEach(el => {
 // Active nav indicator update
 function updateActiveNavLink(scrollPos) {
     const offset = 120; // navbar heights plus buffer
-    
+
     document.querySelectorAll('section').forEach(section => {
         const top = section.offsetTop - offset;
         const bottom = top + section.offsetHeight;
         const id = section.getAttribute('id');
-        
+
         if (scrollPos >= top && scrollPos < bottom) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
