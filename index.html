@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varshitha G.A | Full Stack Developer & AI-ML Integrator Portfolio</title>
+    <meta name="description" content="Portfolio of Varshitha G.A, Full Stack Developer and CSE graduate with experience in Django, React.js, PostgreSQL, and AI pipelines. Explorable through an interactive dev shell.">
+    <meta name="keywords" content="Varshitha G.A, Full Stack Developer, Django REST Framework, React, PostgreSQL, AI Integrations, Software Engineer, Portfolio, Bengaluru">
+    <meta name="author" content="Varshitha G.A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas for Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Global Glowing Accents -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-symbol">&lt;/&gt;</span>
+                <span class="logo-text">VARSHITHA<span class="logo-accent">.GA</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#terminal-section" class="nav-link">Terminal</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="mailto:varshithaga2003@gmail.com" class="btn btn-nav-cta">Hire Me</a>
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+        <nav class="mobile-nav-links">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#terminal-section" class="mobile-link">Terminal</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </nav>
+        <a href="mailto:varshithaga2003@gmail.com" class="btn btn-drawer-cta">Hire Me</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-reveal">
+                        <span class="pulse-dot"></span> Full Stack Developer & AI Enthusiast
+                    </div>
+                    <h1 class="hero-title animate-reveal">
+                        Crafting scalable <br>
+                        <span class="gradient-text">production-ready</span> <br>
+                        web solutions.
+                    </h1>
+                    <p class="hero-subtitle animate-reveal">
+                        Hi, I'm <strong>Varshitha G.A</strong>. I specialize in building robust Django REST backends, dynamic React frontends, and integrating AI workflows.
+                    </p>
+                    <div class="hero-ctas animate-reveal">
+                        <a href="#terminal-section" class="btn btn-primary">
+                            <i class="fa-solid fa-terminal"></i> Try Developer Shell
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            View Portfolio <i class="fa-solid fa-arrow-down-long"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-graphic animate-reveal">
+                    <div class="tech-stack-ring">
+                        <div class="ring-core">
+                            <span class="code-bracket">&lt;</span>
+                            <span class="code-word">Dev</span>
+                            <span class="code-bracket">/&gt;</span>
+                        </div>
+                        <div class="ring-item tech-py" title="Python"><i class="fa-brands fa-python"></i></div>
+                        <div class="ring-item tech-js" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+                        <div class="ring-item tech-react" title="React"><i class="fa-brands fa-react"></i></div>
+                        <div class="ring-item tech-db" title="PostgreSQL"><i class="fa-solid fa-database"></i></div>
+                        <div class="ring-item tech-docker" title="Docker"><i class="fa-brands fa-docker"></i></div>
+                        <div class="ring-item tech-node" title="Node.js"><i class="fa-brands fa-node-js"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- Terminal Section -->
+        <section id="terminal-section" class="terminal-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Workspace</span>
+                    <h2 class="section-title">Developer <span class="gradient-text">Shell</span></h2>
+                    <p class="section-subtitle">Interact with my professional background, skills, and projects through this simulated shell terminal.</p>
+                </div>
+                
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="term-btn btn-close"></span>
+                            <span class="term-btn btn-minimize"></span>
+                            <span class="term-btn btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title"><i class="fa-solid fa-terminal"></i> guest@varshitha.dev:~</div>
+                        <div class="terminal-status"><span class="status-indicator"></span> Online</div>
+                    </div>
+                    
+                    <div class="terminal-body" id="terminalBody">
+                        <div class="terminal-line system-msg">
+                            ========================================================================
+                            Welcome to Varshitha G.A's Dev Shell v1.0.0
+                            Type <span class="term-highlight">'help'</span> for a list of active commands.
+                            Click on any preset command below to auto-execute.
+                            ========================================================================
+                        </div>
+                        <div class="terminal-output" id="terminalOutput"></div>
+                        <div class="terminal-input-line">
+                            <span class="terminal-prompt">guest@varshitha.dev:~$</span>
+                            <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false" placeholder="Type command...">
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-shortcuts">
+                        <span class="shortcut-label">Presets:</span>
+                        <button class="terminal-btn" data-cmd="about">about</button>
+                        <button class="terminal-btn" data-cmd="skills">skills</button>
+                        <button class="terminal-btn" data-cmd="projects">projects</button>
+                        <button class="terminal-btn" data-cmd="experience">experience</button>
+                        <button class="terminal-btn" data-cmd="clear">clear</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="about-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-media">
+                        <div class="photo-frame">
+                            <!-- Abstract glowing developer illustration/visual frame -->
+                            <div class="frame-content">
+                                <i class="fa-solid fa-user-gear developer-icon"></i>
+                                <div class="floating-badge fb-1"><i class="fa-solid fa-code"></i> Django REST</div>
+                                <div class="floating-badge fb-2"><i class="fa-brands fa-react"></i> React 19</div>
+                                <div class="floating-badge fb-3"><i class="fa-solid fa-brain"></i> Ollama AI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-info">
+                        <span class="section-tag">About Me</span>
+                        <h2 class="section-title">Bridging Clean Code & <span class="gradient-text">Intelligent Systems</span></h2>
+                        <p class="about-text">
+                            I am a <strong>Full Stack Developer</strong> who loves turning complex challenges into simple, robust web applications. With hands-on experience building production-grade platforms, I focus on constructing high-throughput APIs in Python/Django, rendering responsive interfaces using React/Next.js, and implementing cutting-edge local AI pipelines (such as Ollama + LLMs).
+                        </p>
+                        
+                        <div class="education-block">
+                            <h3 class="subsection-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                            <div class="edu-card">
+                                <div class="edu-header">
+                                    <h4>Dr. Ambedkar Institute of Technology</h4>
+                                    <span class="edu-date">Nov 2021 – Jun 2025</span>
+                                </div>
+                                <p class="edu-degree">BE — Computer Science and Engineering</p>
+                                <div class="edu-details">
+                                    <span class="edu-cgpa"><i class="fa-solid fa-star"></i> CGPA – 9.0</span>
+                                    <span class="edu-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+                    <p class="section-subtitle">A curated view of tools, frameworks, and programming languages that I use daily to build systems.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-solid fa-square-code"></i></div>
+                        <h3>Languages</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">TypeScript</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-brands fa-react"></i></div>
+                        <h3>Frontend</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">React.js</span>
+                            <span class="skill-badge">Next.js</span>
+                            <span class="skill-badge">Vite.js</span>
+                            <span class="skill-badge">Tailwind CSS</span>
+                            <span class="skill-badge">Vanilla CSS</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend & Frameworks -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h3>Backend & Frameworks</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">Django</span>
+                            <span class="skill-badge">Django REST (DRF)</span>
+                            <span class="skill-badge">Celery</span>
+                            <span class="skill-badge">Redis</span>
+                            <span class="skill-badge">REST APIs</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Databases & Cloud -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3>Data & DevOps</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">PostgreSQL</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">SQLite</span>
+                            <span class="skill-badge">AWS</span>
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">Firebase</span>
+                            <span class="skill-badge">GitHub / GitLab</span>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>AI / ML & Tools</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">LangChain</span>
+                            <span class="skill-badge">Ollama (Llama 3.2)</span>
+                            <span class="skill-badge">Hugging Face</span>
+                            <span class="skill-badge">Pandas / NumPy</span>
+                            <span class="skill-badge">Scikit-learn</span>
+                            <span class="skill-badge">TensorFlow / PyTorch</span>
+                            <span class="skill-badge">Tesseract.js OCR</span>
+                        </div>
+                    </div>
+
+                    <!-- Developer Tools -->
+                    <div class="skill-category-card">
+                        <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>Testing & Dev Tools</h3>
+                        <div class="skill-badge-container">
+                            <span class="skill-badge">Postman</span>
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">VS Code</span>
+                            <span class="skill-badge">Antigravity</span>
+                            <span class="skill-badge">Cursor AI / Windsurf</span>
+                            <span class="skill-badge">Github Copilot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">My Path</span>
+                    <h2 class="section-title">Professional <span class="gradient-text">Timeline</span></h2>
+                    <p class="section-subtitle">Real-world experience in full stack roles and software development internships.</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-header">
+                                <span class="timeline-role">Python Full Stack Developer</span>
+                                <span class="timeline-date">Jul 2025 – Present</span>
+                            </div>
+                            <div class="timeline-company"><i class="fa-solid fa-building"></i> Innovyx Tech Labs</div>
+                            <ul class="timeline-details">
+                                <li>Developed and maintained scalable full-stack web applications using Python, Django, Django REST Framework, React.js, and Next.js in production environments.</li>
+                                <li>Architected and integrated RESTful APIs with dynamic React/Next.js frontends, ensuring seamless user experience across workflows.</li>
+                                <li>Implemented security best practices, PostgreSQL query optimisation, and scalable backend infrastructure in collaboration with cross-functional teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-header">
+                                <span class="timeline-role">Full Stack Developer Intern</span>
+                                <span class="timeline-date">Jan 2025 – Jun 2025</span>
+                            </div>
+                            <div class="timeline-company"><i class="fa-solid fa-building"></i> Edubricz Technologies</div>
+                            <ul class="timeline-details">
+                                <li>Built end-to-end full-stack features using Django REST Framework, React.js, and MySQL for scalable web applications.</li>
+                                <li>Designed, integrated, and tested REST APIs using Postman, ensuring reliable client-server communication and identifying edge-case failures before release.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Works</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">A demonstration of systems I have designed, engineered, and shipped recently.</p>
+                </div>
+                
+                <!-- Project Category Filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                    <button class="filter-btn" data-filter="saas">SaaS</button>
+                </div>
+                
+                <!-- Project Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="fullstack ai-ml saas" data-project-id="accosol">
+                        <div class="project-card-header">
+                            <span class="project-tag-pill">AI ERP</span>
+                            <div class="project-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        </div>
+                        <h3 class="project-title">ACCOSOL</h3>
+                        <p class="project-description">An AI-powered Financial Management Engine automating invoices, POs, quotations, and reconciliation with custom approval levels.</p>
+                        <div class="project-tech-badges">
+                            <span>React 19</span>
+                            <span>Django REST</span>
+                            <span>Ollama (Llama 3.2)</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <button class="btn-card-action">Explore Details <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="fullstack saas" data-project-id="autoshine">
+                        <div class="project-card-header">
+                            <span class="project-tag-pill">SaaS Platform</span>
+                            <div class="project-icon"><i class="fa-solid fa-car-wash"></i></div>
+                        </div>
+                        <h3 class="project-title">AUTOSHINE</h3>
+                        <p class="project-description">A waterless car wash operations platform handling multi-role scheduling, PhonePe gateway, and offline SQLite synchronization.</p>
+                        <div class="project-tech-badges">
+                            <span>React 19</span>
+                            <span>DRF</span>
+                            <span>PhonePe API</span>
+                            <span>SQLite Sync</span>
+                        </div>
+                        <button class="btn-card-action">Explore Details <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="fullstack" data-project-id="miisky">
+                        <div class="project-card-header">
+                            <span class="project-tag-pill">HealthTech</span>
+                            <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        </div>
+                        <h3 class="project-title">MIISKY</h3>
+                        <p class="project-description">A smart health food ecosystem with background worker nutrition reports, Celery diet-plan tracking, and multi-role operations.</p>
+                        <div class="project-tech-badges">
+                            <span>React.js</span>
+                            <span>Django</span>
+                            <span>Celery & Redis</span>
+                            <span>JWT Auth</span>
+                        </div>
+                        <button class="btn-card-action">Explore Details <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-tag">Let's Connect</span>
+                        <h2 class="section-title">Start a <span class="gradient-text">Conversation</span></h2>
+                        <p class="contact-text">
+                            I'm currently seeking new full-time software engineering roles and collaboration opportunities. Reach out if you'd like to talk about web development, AI automation, or my projects!
+                        </p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email Me</span>
+                                    <a href="mailto:varshithaga2003@gmail.com" class="detail-value">varshithaga2003@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Call/Text</span>
+                                    <span class="detail-value">+91-8088785958</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-content">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Bengaluru, Karnataka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-row">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3 class="contact-card-title"><i class="fa-solid fa-paper-plane"></i> Send a Message</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="formName">Full Name</label>
+                                <input type="text" id="formName" name="name" required placeholder="e.g. John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="formEmail">Email Address</label>
+                                <input type="email" id="formEmail" name="email" required placeholder="name@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="formMessage">Message</label>
+                                <textarea id="formMessage" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="formFeedback" class="form-feedback hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-content" id="modalContent">
+                <!-- Injected dynamically via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Varshitha G.A. All rights reserved.</p>
+            <p class="credit">Built with <i class="fa-solid fa-heart pulse-heart"></i> and Vanilla Tech Stack</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
