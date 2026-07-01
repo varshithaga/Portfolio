@@ -1570,35 +1570,7 @@ header.scrolled {
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-    border-top: 1px solid var(--border-color);
-    background-color: var(--bg-darker);
-    padding: 40px 0;
-    font-size: 14px;
-    color: var(--text-dark);
-}
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.pulse-heart {
-    color: #ef4444;
-    animation: heartbeat 1.5s infinite;
-}
-
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
-}
 
 /* ==========================================================================
    Scroll Reveal Animations
@@ -1702,11 +1674,7 @@ footer {
     .modal-features-list {
         grid-template-columns: 1fr;
     }
-    
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+
 }
 
 @media (max-width: 480px) {
