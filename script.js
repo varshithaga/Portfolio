@@ -257,6 +257,49 @@ const projectData = {
             "Real-time Notification Alerts: Provides visual confirmation messages and live tracking updates.",
             "Scalable full-stack design utilizing MongoDB and third-party communications APIs."
         ]
+    },
+    grandeur: {
+        title: "GRANDEUR",
+        subtitle: "Full-Stack Hotel Management System",
+        tags: ["FastAPI", "SQLAlchemy 2", "PostgreSQL", "React 19", "TypeScript", "Vite", "JWT Auth"],
+        description: "Grandeur is a full-stack hotel platform pairing a public guest website — room browsing, live availability, and booking requests — with an admin dashboard that manages rooms, reservations, bookings, payments, staff, work assignments and guest enquiries across 16 CRUD modules.",
+        techStack: [
+            "FastAPI: Async Python REST API with dependency-injected authentication and Pydantic request/response schemas.",
+            "SQLAlchemy 2 & PostgreSQL: Typed ORM models, tables auto-created on startup, list queries ordered by id.",
+            "React 19 & React Router 7: One SPA serving a lazy-loaded public site and token-protected admin routes.",
+            "JWT (access + refresh): PBKDF2-hashed passwords, silent token refresh, client-side ProtectedRoute guards.",
+            "Zero-dependency date pickers: Self-contained calendar and date-time components built from scratch."
+        ],
+        features: [
+            "Public guest site: home, rooms & suites, availability search, spa, dining, gallery, about and contact.",
+            "Live room availability check with real-time pricing on the booking flow.",
+            "Admin CRUD for floors, room types, amenities, rooms, reservations, bookings, payments and reviews.",
+            "Staff operations module: departments, roles, employees, work types and scheduled work assignments.",
+            "Paginated, searchable admin tables with a default admin account seeded on first run.",
+            "An animated SVG walkthrough embedded in the README, regenerated from the seed data."
+        ]
+    },
+    stockwise: {
+        title: "STOCKWISE",
+        subtitle: "Inventory & Billing (POS) System",
+        tags: ["React 19", "TypeScript", "Vite", "Django REST", "Tailwind CSS 4", "SimpleJWT", "ReportLab"],
+        description: "StockWise is a multi-branch retail inventory and point-of-sale system: buy stock from suppliers, hold it per branch, sell it at a GST-compliant POS terminal, and track customer dues, loyalty points, low stock and daily revenue — all under strict 3-tier role-based access.",
+        techStack: [
+            "Django REST Framework: ViewSets and nested serializers for sales, purchases and stock, with page-size pagination.",
+            "React 19, TypeScript & Vite: SPA with an Axios JWT interceptor and role-gated routes.",
+            "Tailwind CSS 4: A custom violet-spectrum design system applied consistently across every screen.",
+            "SimpleJWT: 8-hour access and 7-day rotating refresh tokens, plus optional Google sign-in.",
+            "ReportLab: One-click GST invoice PDFs with a per-line CGST/SGST breakdown.",
+            "Django signals: Per-branch stock kept automatically in sync with each product's cached total quantity."
+        ],
+        features: [
+            "POS terminal with product search, per-line discounts, split payments (cash / UPI / card / credit) and held draft bills.",
+            "Supplier purchase orders that stock the shelves, plus a full stock-movement audit ledger (in / out / adjustment / transfer).",
+            "Customer ledger with automatic outstanding balances and loyalty points earned on completed sales.",
+            "Dashboard: today's and monthly revenue, payment-mode split, low-stock alerts and top-selling products.",
+            "3-tier RBAC — Admin, Store Manager and Cashier — enforced on both the API and the UI.",
+            "One-command demo-data seeder and an animated SVG walkthrough embedded in the README."
+        ]
     }
 };
 
