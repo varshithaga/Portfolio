@@ -298,7 +298,47 @@ const projectData = {
             "Customer ledger with automatic outstanding balances and loyalty points earned on completed sales.",
             "Dashboard: today's and monthly revenue, payment-mode split, low-stock alerts and top-selling products.",
             "3-tier RBAC — Admin, Store Manager and Cashier — enforced on both the API and the UI.",
-            "One-command demo-data seeder and an animated SVG walkthrough embedded in the README."
+            "One-command demo-data seeder, plus a walkthrough video and screenshots captured from the running app."
+        ],
+        gallery: [
+            { src: "assets/projects/stockwise-dashboard.jpg", caption: "Dashboard" },
+            { src: "assets/projects/stockwise-billing.jpg", caption: "Billing / POS terminal" }
+        ],
+        links: [
+            { label: "Watch Video", icon: "fa-solid fa-circle-play", url: "https://github.com/varshithaga/Inventory-And-Billing--System/blob/main/docs/walkthrough.mp4" },
+            { label: "Screenshots", icon: "fa-solid fa-images", url: "https://github.com/varshithaga/Inventory-And-Billing--System/tree/main/docs/screenshots" },
+            { label: "Source Code", icon: "fa-brands fa-github", url: "https://github.com/varshithaga/Inventory-And-Billing--System" }
+        ]
+    },
+    ledgerdesk: {
+        title: "LEDGERDESK",
+        subtitle: "Accounting, GST & Bookkeeping Suite for Indian Small Businesses",
+        tags: ["FastAPI", "SQLAlchemy 2", "Alembic", "PostgreSQL", "React 19", "TypeScript", "Tailwind CSS 4"],
+        description: "LedgerDesk turns bank statements into categorized, double-entry books. It also handles sales invoices, purchase bills, payments, GST (CGST / SGST / IGST with GSTR-1 and GSTR-3B export), TDS, inventory and the full set of financial reports. Every figure in every report comes from one journal, and each company's books live in a database of their own.",
+        techStack: [
+            "FastAPI & Pydantic 2: REST API split into routers per area, with a services layer for posting, GST, reconciliation and reports.",
+            "SQLAlchemy 2 & Alembic: Typed models, versioned migrations, one PostgreSQL database per company.",
+            "React 19, TypeScript & Vite: Lazy-loaded pages, Axios with silent JWT refresh and an X-Company header.",
+            "Tailwind CSS 4: Light and dark themes with a home-grown component kit.",
+            "pandas, openpyxl & pdfplumber: Parse CSV, Excel and PDF bank statements.",
+            "Gemini / OpenAI: A read-only AI assistant that answers questions about the books."
+        ],
+        features: [
+            "Bank statement upload with running-balance checks, continuity gaps and duplicate detection.",
+            "Keyword and BAI-code auto-categorization, then Make Final to post each bank line to the journal.",
+            "GST invoices and purchase bills with PDF and email, credit and debit notes, TDS and recurring invoices.",
+            "Bank reconciliation with auto-match, plus period close to lock signed-off months.",
+            "P&L, Balance Sheet, Trial Balance, Cash Flow, Account Ledger, aging and GSTR-1 / 3B JSON export.",
+            "Custom roles with per-page View / Create / Edit / Delete rights, a full audit log and multi-company support."
+        ],
+        gallery: [
+            { src: "assets/projects/ledgerdesk-dashboard.jpg", caption: "Dashboard" },
+            { src: "assets/projects/ledgerdesk-invoices.jpg", caption: "Sales invoices" }
+        ],
+        links: [
+            { label: "Watch Video", icon: "fa-solid fa-circle-play", url: "https://github.com/varshithaga/AccountManagement/blob/main/docs/walkthrough.mp4" },
+            { label: "Screenshots", icon: "fa-solid fa-images", url: "https://github.com/varshithaga/AccountManagement/tree/main/docs/screenshots" },
+            { label: "Source Code", icon: "fa-brands fa-github", url: "https://github.com/varshithaga/AccountManagement" }
         ]
     }
 };
@@ -336,13 +376,19 @@ function renderModal(data) {
     const tagsHTML = data.tags.map(tag => `<span class="project-tag-pill">${tag}</span>`).join('');
     const techHTML = data.techStack.map(tech => `<li><i class="fa-solid fa-circle-check"></i> <span>${tech}</span></li>`).join('');
     const featuresHTML = data.features.map(feat => `<li><i class="fa-solid fa-check"></i> <span>${feat}</span></li>`).join('');
+    const linksHTML = (data.links || []).map(link =>
+        `<a class="modal-link" href="${link.url}" target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.label}</a>`).join('');
+    const galleryHTML = (data.gallery || []).map(img =>
+        `<figure class="modal-shot"><a href="${img.src}" target="_blank" rel="noopener"><img src="${img.src}" alt="${data.title} ${img.caption}" loading="lazy"></a><figcaption>${img.caption}</figcaption></figure>`).join('');
 
     modalContent.innerHTML = `
         <div class="modal-header-section">
             <div class="modal-tag-row">${tagsHTML}</div>
             <h3 class="modal-title">${data.title}</h3>
             <p class="modal-subtitle">${data.subtitle}</p>
+            ${linksHTML ? `<div class="modal-links">${linksHTML}</div>` : ''}
         </div>
+        ${galleryHTML ? `<div class="modal-gallery">${galleryHTML}</div>` : ''}
         <div class="modal-body-section">
             <div class="modal-details-grid">
                 <div class="modal-desc-col">

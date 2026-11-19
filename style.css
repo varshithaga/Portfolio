@@ -1445,7 +1445,9 @@ header.scrolled {
 
 .modal-tag-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
+    padding-right: 40px; /* keep clear of the close button */
     margin-bottom: 12px;
 }
 
@@ -1530,6 +1532,85 @@ header.scrolled {
 .modal-features-list li i {
     color: var(--primary);
     margin-top: 4px;
+}
+
+/* Project links (video, screenshots, source) */
+.modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.modal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border-glow);
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-link:hover {
+    background: var(--gradient-hero);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.modal-link i {
+    color: var(--secondary);
+}
+
+.modal-link:hover i {
+    color: #fff;
+}
+
+/* Project screenshots */
+.modal-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.modal-shot {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-darker);
+}
+
+.modal-shot img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.modal-shot a:hover img {
+    transform: scale(1.03);
+}
+
+.modal-shot figcaption {
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .modal-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================================================================
